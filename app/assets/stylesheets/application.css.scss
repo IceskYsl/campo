@@ -17,10 +17,11 @@ $font-size-base: 15px;
 @import "markdown";
 
 body {
-  background: #eee;
+  background: #eee url(/assets/bg.png) bottom left repeat;
 }
 
 .text-hide-overflow {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+

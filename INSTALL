@@ -1,0 +1,3 @@
+/usr/local/Cellar/libxml2/2.9.1/include/libxml2
+
+sudo gem install nokogiri -- --with-xml2-include=/usr/local/Cellar/libxml2/2.9.1/include/libxml2 --with-xml2-lib=/usr/local/Cellar/libxml2/2.9.1/lib/ --with-xslt-dir=/usr/local/Cellar/libxslt/1.1.28/ --with-iconv-include=/usr/local/Cellar/libiconv/1.13.1/include --with-iconv-lib=/usr/local/Cellar/libiconv/1.13.1/lib

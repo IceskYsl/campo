@@ -139,6 +139,7 @@ en:
       sign_in: Sign in
       sign_up: Sign up
       topics: Topics
+      admins: Admin
   locales:
     en: English
     zh-CN: Chinese(Simplified)

@@ -136,6 +136,7 @@ zh-TW:
       sign_in: "登錄"
       sign_up: "註冊"
       topics: "話題"
+      admins: "管理"
   locales:
     en: "英文"
     zh-CN: "簡體中文"

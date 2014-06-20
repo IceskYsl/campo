@@ -136,6 +136,7 @@ zh-CN:
       sign_in: "登录"
       sign_up: "注册"
       topics: "话题"
+      admins: "管理"
   locales:
     en: "英文"
     zh-CN: "简体中文"
@@ -251,6 +252,7 @@ zh-CN:
       title: "标题"
     index:
       all_categories: "所有分类"
+      all_stats: "统计信息"
       create_topic: "创建话题"
       hot: "热门"
       hot_topics: "热门话题"
