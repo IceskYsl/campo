@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:create] do
     collection do
+      get :index
       get :check_email
       get :check_username
     end

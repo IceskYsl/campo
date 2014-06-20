@@ -18,6 +18,10 @@ $font-size-base: 15px;
 
 body {
   background: #eee asset-url('bg.png') bottom left repeat;
+  font-family: 'Helvetica Neue',Helvetica,Arial,Sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #222;
 }
 
 .text-hide-overflow {
@@ -25,3 +29,15 @@ body {
   text-overflow: ellipsis;
 }
 
+
+h3, .h3 {
+font-size: 16px;
+}
+
+h2, .h2 {
+font-size: 20px;
+}
+
+.main{
+	
+}

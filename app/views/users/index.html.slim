@@ -1,0 +1,38 @@
+- @page_title = "会员"
+
+.main
+  .container
+    .row
+      .col-md-9
+        .panel
+          .panel-heading.clearfix
+            h3.panel-title
+              = "会员"
+          .panel-body
+            .list-group-user
+              - if @users.any?
+                = render @users
+              - else
+                .list-group-item.text-center.text-muted.empty-message
+                  = t '.no_user_yet'
+          - if @users.total_pages > 1
+            .panel-footer.clearfix
+              .pull-right
+                = paginate @users, theme: 'campo'
+
+      .col-md-3
+        .panel
+          .panel-body
+            | 会员展示墙，加入我们吧~ 
+        .panel
+          .panel-heading
+            h4.panel-title
+              = t '.all_stats'
+          .panel-body
+            ul.stats
+              li
+                = "会员: #{User.count}"
+              li
+                = "帖子: #{Topic.count}"
+              li
+                = "讨论: #{Comment.count}"

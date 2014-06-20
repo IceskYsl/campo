@@ -137,6 +137,8 @@ zh-CN:
       sign_up: "注册"
       topics: "话题"
       admins: "管理"
+      resques: "Resques"
+      users: "会员"
   locales:
     en: "英文"
     zh-CN: "简体中文"
@@ -259,6 +261,7 @@ zh-CN:
       newest: "最新"
       newest_topics: "最新话题"
       no_topic_yet: "还没有话题"
+      no_user_yet: "还没有会员"
     new:
       new_topic: "新话题"
     search:

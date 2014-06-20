@@ -10,3 +10,20 @@ RAILS_ENV=production BACKGROUND=yes TERM_CHILD=1 COUNT=2 QUEUE=* rake resque:wor
 ref: http://hone.heroku.com/resque/2012/08/21/resque-signals.html
 
 http://www.1sters.com/resque/overview
+
+
+RAILS_ENV=production bundle exec rake assets:precompile
+
+
+
+# ElasticSearch
+https://gist.github.com/rajraj/1556657
+
+export JAVA_HOME=/usr/lib/jvm/jre-1.7.0-openjdk.x86_64
+
+
+
+RAILS_ENV=production bundle exec rake elasticsearch:import:model
+
+
+topics = Topic.search("swift").records
