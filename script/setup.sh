@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 USER=`whoami`
-APP_ROOT=/var/www/campo
+APP_ROOT=/datas/www/1st
 
 sudo apt-get update
 
