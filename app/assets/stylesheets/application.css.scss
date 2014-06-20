@@ -17,7 +17,7 @@ $font-size-base: 15px;
 @import "markdown";
 
 body {
-  background: #eee url(/assets/bg.png) bottom left repeat;
+  background: #eee asset-url('bg.png') bottom left repeat;
 }
 
 .text-hide-overflow {
