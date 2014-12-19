@@ -72,6 +72,9 @@ html
               i.fa.fa-bars
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav
+            li class=('active' if request.original_fullpath =~ /^\/wikis/)
+              a href=wikis_path
+                = t '.wiki'
             li class=('active' if request.original_fullpath =~ /^\/topics/)
               a href=topics_path
                 = t '.community'

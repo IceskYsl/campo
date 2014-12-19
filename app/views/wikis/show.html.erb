@@ -1,0 +1,61 @@
+<%@page_title = "#{@wiki.title}"%>
+<div class="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel">
+              <div class="panel-body">
+                <h1>Material Design 中文版</h1>
+                <p>
+                  Google I/O 2014发布的Material Design将会成为统一Android，Chrome等平台的设计语言规范，对Android从业人员意义重大，我们一帮不知天高地厚的人正通过互联网的方式将其翻译成中文~
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="panel">
+              <div class="panel-body">
+                <%=markdown_format @toc%>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="panel">
+              <div class="panel-body">
+                <%=markdown_format @content%>
+              </div>
+            </div>
+            <div class="panel" id="comments">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <span class="Comments" title="Comments">Comments</span>
+                </h3>
+              </div>
+              <div class="panel-body">
+                  <!-- 多说评论框 start -->
+                  <div class="ds-thread" data-thread-key='<%="wikis/#{@wiki.slug}/#{@page_slug}"%>' data-title='<%="#{h @wiki.title}"%>' data-url=<%="http://wiki.jikexueyuan.com/#{@wiki.slug}/#{@page_slug}"%>></div>
+                <!-- 多说评论框 end -->
+                <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                <script type="text/javascript">
+                var duoshuoQuery = {short_name:"wikis"};
+                  (function() {
+                    var ds = document.createElement('script');
+                    ds.type = 'text/javascript';ds.async = true;
+                    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                    ds.charset = 'UTF-8';
+                    (document.getElementsByTagName('head')[0] 
+                     || document.getElementsByTagName('body')[0]).appendChild(ds);
+                  })();
+                  </script>
+                <!-- 多说公共JS代码 end -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+

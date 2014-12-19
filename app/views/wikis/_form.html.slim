@@ -1,0 +1,67 @@
+= form_for @wiki, remote: true, html: { class: 'wiki-form' } do |f|
+  .row
+    .col-md-9
+      .form-group
+        = f.text_field :title, class: 'form-control', placeholder: t('.title'), tabIndex: 1
+  .row
+    .col-md-9
+      .form-group
+        = f.text_field :slug, class: 'form-control', placeholder: t('.slug'), tabIndex: 2
+  .row
+    .col-md-9
+      .form-group
+        = f.text_field :source, class: 'form-control', placeholder: t('.source'), tabIndex: 2
+  .row
+    .col-md-9
+      .form-group
+        = f.text_field :github, class: 'form-control', placeholder: t('.github'), tabIndex: 2
+  .row
+    .col-md-9
+      .form-group
+        = f.text_field :git, class: 'form-control', placeholder: t('.git'), tabIndex: 2
+  .form-group
+    = markdown_area f, :body, tabIndex: 3
+  - if wiki.new_record?
+    = f.submit t('.create_wiki'), class: 'btn btn-success', tabIndex: 4, 'data-disable-with' => t('.create_wiki')
+  - else
+    = f.submit t('.save_changes'), class: 'btn btn-success', tabIndex: 4, 'data-disable-with' => t('.save_changes')
+    '
+    a.btn.btn-default href=wiki_path(@wiki) tabIndex="5"
+      = t '.cancel'
+
+- form_id = @wiki.new_record? ? 'new_wiki' : "edit_wiki_#{@wiki.id}"
+
+javascript:
+  $('##{form_id}').validate({
+    rules: {
+      'wiki[title]': {
+        required: true
+      },
+      'wiki[slug]': {
+        required: true
+      },
+      'wiki[github]': {
+        required: true
+      },
+      'wiki[git]': {
+        required: true
+      },
+      'wiki[source]': {
+        required: true
+      },
+      'wiki[body]': {
+        required: true
+      }
+    },
+    messages: {
+      'wiki[title]': {
+        required: '#{@wiki.errors.generate_message :title, :blank}'
+      },
+      'wiki[slug]': {
+        required: '#{@wiki.errors.generate_message :slug, :blank}'
+      },
+      'wiki[body]': {
+        required: '#{@wiki.errors.generate_message :body, :blank}'
+      }
+    }
+  });

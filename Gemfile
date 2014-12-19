@@ -1,10 +1,11 @@
 # source 'https://ruby.taobao.org'
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.1'
+gem 'rails', '4.1.5'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
+gem 'mysql2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -51,7 +52,7 @@ gem 'rouge', '~> 1.3.1'
 # being dependent on a binary library.
 gem 'bcrypt', '~> 3.1.7', require: false
 
-# Paignator
+# Paginator
 gem 'kaminari', '~> 0.15.1'
 
 # Nokogiri XML parser

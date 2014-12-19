@@ -15,6 +15,12 @@ Rails.application.routes.draw do
 
   post 'markdown/preview', to: 'markdown#preview'
 
+  resources :wikis
+  
+
+  
+  
+
   resources :users, only: [:create] do
     collection do
       get :index
@@ -84,6 +90,8 @@ Rails.application.routes.draw do
     root to: 'topics#index'
   end
 
+
+
   namespace :settings do
     resource :account, only: [:show, :update]
     resource :password, only: [:show, :update]
@@ -139,4 +147,9 @@ Rails.application.routes.draw do
   if Rails.env.development?
     get 'qunit', to: 'qunit#index'
   end
+
+  #wiki
+  get '/:slug/*page_slug' ,to: 'wikis#page',as: :slug_page
+  get '/:slug' , to: 'wikis#show',as: :slug_wiki
+  
 end

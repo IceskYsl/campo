@@ -5,12 +5,14 @@ class User < ActiveRecord::Base
 
   has_secure_password
   has_many :topics, dependent: :destroy
+  has_many :wikis, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :notifications, dependent: :delete_all
   has_many :likes, dependent: :delete_all
 
   has_many :like_topics, through: :likes, source: :likeable, source_type: 'Topic'
   has_many :like_comments, through: :likes, source: :likeable, source_type: 'Comment'
+  has_many :like_wikis, through: :likes, source: :likeable, source_type: 'Wiki'
 
   has_many :attachments, dependent: :delete_all
 
@@ -69,12 +71,12 @@ class User < ActiveRecord::Base
   end
 
   def confirmation_token
-    self.class.verifier_for('confirmation').generate([id, Time.now])
+    self.class.verifier_for('confirmation').generate([id, email, Time.now])
   end
 
   def self.find_by_confirmation_token(token)
-    user_id, timestamp = verifier_for('confirmation').verify(token)
-    User.find_by(id: user_id) if timestamp > 1.hour.ago
+    user_id, email, timestamp = verifier_for('confirmation').verify(token)
+    User.find_by(id: user_id, email: email) if timestamp > 1.hour.ago
   rescue ActiveSupport::MessageVerifier::InvalidSignature
     nil
   end

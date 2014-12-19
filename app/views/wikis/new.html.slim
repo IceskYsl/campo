@@ -1,0 +1,12 @@
+- @page_title = t '.new_wiki'
+
+.main
+  .container
+    .row
+      .col-md-9
+        .panel
+          .panel-heading
+            h3.panel-title = t '.new_wiki'
+
+          .panel-body
+            = render 'form', wiki: @wiki

@@ -132,6 +132,7 @@ en:
     application:
       comments: Comments
       community: Community
+      wiki: "wiki"
       likes: Likes
       logout: Logout
       profile: Profile
@@ -248,6 +249,17 @@ en:
         if you are mentioned
       you_will_receive_notifications_for_all_comments: You will receive notifications
         for all comments
+  wikis:
+    edit:
+      edit_topic: "编辑wiki"
+    form:
+      cancel: "取消"
+      create_topic: "创建wiki"
+      no_category: "不分类"
+      save_changes: "保存修改"
+      title: "标题"
+    new:
+      new_wiki: "创建新Wiki"
   topics:
     edit:
       edit_topic: Edit topic

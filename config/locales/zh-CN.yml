@@ -129,6 +129,7 @@ zh-CN:
     application:
       comments: "评论"
       community: "社区"
+      wiki: "wiki"
       likes: "收藏"
       logout: "退出"
       profile: "个人资料"
@@ -243,6 +244,23 @@ zh-CN:
       you_do_not_receive_any_notifications: "你不会收到任何通知"
       you_only_receive_notifications_if_you_are_mentioned: "你只会在被提及的时候收到通知"
       you_will_receive_notifications_for_all_comments: "每当有新评论时你都会收到通知"
+  wikis:
+    edit:
+      edit_topic: "编辑wiki"
+    form:
+      cancel: "取消"
+      create_wiki: "创建wiki"
+      no_category: "不分类"
+      save_changes: "保存修改"
+      title: "标题"
+      slug: "Slug"
+      source: "内容目录地址，默认'/'"
+      github: "Github主页地址"
+      git: "Git仓库地址"
+    new:
+      new_wiki: "创建新Wiki"
+    index:
+      all_wikis: "wiki"
   topics:
     edit:
       edit_topic: "编辑话题"

@@ -38,6 +38,19 @@ h2, .h2 {
 font-size: 20px;
 }
 
+h1, .h1 {
+font-size: 22px;
+margin-top:10px;
+}
+
 .main{
 	
+}
+
+.panel-body img{
+	max-width: 100%;
+}
+
+.panel-body ul, ol{
+	padding-left: 18px;
 }
