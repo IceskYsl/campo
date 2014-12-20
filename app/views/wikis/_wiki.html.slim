@@ -1,10 +1,6 @@
-a.list-group-item.topic href=slug_wiki_path(slug: wiki.slug)
-    .list-group-item-avatar
-      img.img-rounded alt="avatar" src=wiki.user.avatar.normal.url
+a.list-group-item.wiki href=slug_wiki_path(slug: wiki.slug)
+    .list-group-item-poster
+      img.img-rounded src="#{wiki.poster}?imageView2/5/w/200/h/120" class="img-rounded"
     .list-group-item-content
       .list-group-item-heading
         b = wiki.title
-      .text-muted
-        = wiki.user.name
-        = ' · '
-        = time_ago_tag wiki.created_at
