@@ -23,7 +23,7 @@ class WikisController < ApplicationController
     readme = "#{Rails.root}/public/material_design/README.md"
     @content = File.read(readme)
 
-    @comments = @wiki.comments.includes(:user).order(id: :asc).page(params[:page])
+    #@comments = @wiki.comments.includes(:user).order(id: :asc).page(params[:page])
   end
 
   def edit
